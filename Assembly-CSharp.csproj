@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\mouseLook.cs" />
+     <Compile Include="Assets\Scripts\npcScript.cs" />
      <Compile Include="Assets\Scripts\playerController.cs" />
      <Compile Include="Assets\Scripts\playerShrink.cs" />
      <Compile Include="Assets\Scripts\timerScript.cs" />
