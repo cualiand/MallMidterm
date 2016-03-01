@@ -12,10 +12,14 @@ public class timerScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-       int timePassed = (int) Time.time;
-       uiText.text = "the timer is " + timePassed.ToString();
-
-       player.localScale += new Vector3(-.03f, -.03f, -.03f) * Time.deltaTime;
+      int timePassed = (int) Time.time; //use timesincelevelload
+      uiText.text = "the timer is " + timePassed.ToString();
+        
+        if( timePassed < 63 )
+        {
+            player.localScale += new Vector3(-.025f, -.025f, -.025f) * Time.deltaTime;
+        }
+       
 
 
 	}

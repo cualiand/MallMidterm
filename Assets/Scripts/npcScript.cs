@@ -7,29 +7,38 @@ public class npcScript : MonoBehaviour {
     public Transform player;
     public Transform npc;
     public Text uiText;
+    public Text uiText2;
     public int timePassed;
-    public bool spottedPlayer;
-
-    // Use this for initialization
-    void Start() {
-
-    }
+    
+    
 
     // Update is called once per frame
     void Update() {
-        timePassed = (int)Time.time;
-        if ((player.position - npc.position).magnitude < 5f) {                                     //&& timePassed <= 5)  {
-            uiText.text = "the timer is " + timePassed.ToString() + "\n\ni spotted the player!";
-            spottedPlayer = true;
-        }
-        else if ((player.position - npc.position).magnitude < 5f) //&& timePassed > 5)
-            {
-                uiText.text = "the timer is " + timePassed.ToString() + "\n\nit's too late to talk!";
-            }
-        else
+        int timePassed = (int)Time.time;
+        bool spottedPlayer = false;
+
+        if ((player.position - npc.position).magnitude <= 5f && Input.GetKeyDown(KeyCode.Space)) 
         {
-               //uiText.text = "the timer is " + timePassed.ToString();
-                spottedPlayer = false;
+            spottedPlayer = true;
+            Debug.Log("detected");
+            if (timePassed <= 5)
+            {
+                uiText2.text = "i spotted the player!";
             }
+            else
+            {
+                uiText2.text = "i'm too afraid to talk!";
+            }
+
+        }
+
+        
+        
+       
+     
+      
+       
+      
+   
         }
     }
