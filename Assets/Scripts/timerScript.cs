@@ -11,8 +11,8 @@ public class timerScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        int timePassed = (int) Time.time;
-        GetComponent<Text>().text = "the timer is " + timePassed.ToString();
+        ////int timePassed = (int) Time.time;
+      //  GetComponent<Text>().text = "the timer is " + timePassed.ToString();
 
         player.localScale += new Vector3(-.03f, -.03f, -.03f) * Time.deltaTime;
 	}
