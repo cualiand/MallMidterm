@@ -10,25 +10,26 @@ public class npcScript : MonoBehaviour {
     public int timePassed;
     public bool spottedPlayer;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    // Use this for initialization
+    void Start() {
+
+    }
+
+    // Update is called once per frame
+    void Update() {
         timePassed = (int)Time.time;
-        if ((player.position - npc.position).magnitude < 5f && timePassed <= 5)  {
+        if ((player.position - npc.position).magnitude < 5f) {                                     //&& timePassed <= 5)  {
+            uiText.text = "the timer is " + timePassed.ToString() + "\n\ni spotted the player!";
             spottedPlayer = true;
-            uiText.text = "the timer is " + timePassed.ToString() +  "\n\ni spotted the player!";
         }
-        else if ((player.position - npc.position).magnitude < 5f && timePassed > 5)
-        {
-            uiText.text = "the timer is " + timePassed.ToString() + "\n\nit's too late to talk!";
-        }
+        else if ((player.position - npc.position).magnitude < 5f) //&& timePassed > 5)
+            {
+                uiText.text = "the timer is " + timePassed.ToString() + "\n\nit's too late to talk!";
+            }
         else
         {
-            uiText.text = "the timer is " + timePassed.ToString();
+               //uiText.text = "the timer is " + timePassed.ToString();
+                spottedPlayer = false;
+            }
         }
     }
-}

@@ -20,5 +20,7 @@ public class playerController : MonoBehaviour {
         myController.Move(movement + Physics.gravity * Time.deltaTime);
 
         transform.Rotate(0f, horizontal * 90f * Time.deltaTime, 0f);
+
+
 	}
 }

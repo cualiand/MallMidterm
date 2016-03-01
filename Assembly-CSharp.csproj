@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\playerController.cs" />
      <Compile Include="Assets\Scripts\playerShrink.cs" />
      <Compile Include="Assets\Scripts\timerScript.cs" />
+     <Compile Include="Assets\Scripts\winningScript.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
