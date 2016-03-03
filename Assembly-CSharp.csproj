@@ -52,6 +52,8 @@
      <Compile Include="Assets\Scripts\npcScript.cs" />
      <Compile Include="Assets\Scripts\playerController.cs" />
      <Compile Include="Assets\Scripts\playerShrink.cs" />
+     <Compile Include="Assets\Scripts\randomNPCScript.cs" />
+     <Compile Include="Assets\Scripts\restartGame.cs" />
      <Compile Include="Assets\Scripts\restartScene.cs" />
      <Compile Include="Assets\Scripts\timerScript.cs" />
      <Compile Include="Assets\Scripts\titleScreen.cs" />

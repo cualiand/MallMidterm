@@ -9,7 +9,7 @@ public class npc2Script : MonoBehaviour
     public Transform npc;
     public Text uiText;
     public Text uiText2;
-    public int timePassed;
+    
 
 
 

@@ -14,7 +14,7 @@ public class npcScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        int timePassed = (int)Time.time;
+        int timePassed = (int)Time.timeSinceLevelLoad; //use timesincelevelload
         bool spottedPlayer = false;
 
         if ((player.position - npc.position).magnitude <= 5f && Input.GetKeyDown(KeyCode.Space)) 
