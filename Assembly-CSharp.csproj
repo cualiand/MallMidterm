@@ -47,14 +47,18 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\basicPlayer.cs" />
      <Compile Include="Assets\Scripts\deathZone.cs" />
+     <Compile Include="Assets\Scripts\hint1NPC.cs" />
+     <Compile Include="Assets\Scripts\hint2NPC.cs" />
      <Compile Include="Assets\Scripts\mouseLook.cs" />
      <Compile Include="Assets\Scripts\npc2Script.cs" />
      <Compile Include="Assets\Scripts\npcScript.cs" />
      <Compile Include="Assets\Scripts\playerController.cs" />
      <Compile Include="Assets\Scripts\playerShrink.cs" />
      <Compile Include="Assets\Scripts\randomNPCScript.cs" />
+     <Compile Include="Assets\Scripts\redRandomNPC.cs" />
      <Compile Include="Assets\Scripts\restartGame.cs" />
      <Compile Include="Assets\Scripts\restartScene.cs" />
+     <Compile Include="Assets\Scripts\soundDemo.cs" />
      <Compile Include="Assets\Scripts\timerScript.cs" />
      <Compile Include="Assets\Scripts\titleScreen.cs" />
      <Compile Include="Assets\Scripts\winningScript.cs" />

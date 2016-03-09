@@ -2,7 +2,8 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class randomNPCScript : MonoBehaviour {
+public class redRandomNPC : MonoBehaviour
+{
 
 
     public Transform player;
@@ -13,14 +14,17 @@ public class randomNPCScript : MonoBehaviour {
     public float randomNumber;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         randomNumber = Random.value;
         Debug.Log(randomNumber);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if ((player.position - npc.position).magnitude <= 5f && Input.GetKeyDown(KeyCode.Space))
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        int timePassed = (int)Time.timeSinceLevelLoad;
+        if ((player.position - npc.position).magnitude <= 5f && Input.GetKeyDown(KeyCode.Space) && timePassed <= 30)
         {
             if (randomNumber * 100f < 10f)
             {
@@ -40,7 +44,7 @@ public class randomNPCScript : MonoBehaviour {
             }
             if (randomNumber * 100f <= 50f && randomNumber * 100f > 40f)
             {
-                uiText2.text = "Dude, have you seen the new Call of Duty?\n It looks sick, bro!";
+                uiText2.text = "Dude, have you seen the new Call of Duty? It looks sick, bro!";
             }
             if (randomNumber * 100f <= 60f && randomNumber * 100f > 50f)
             {
@@ -48,11 +52,11 @@ public class randomNPCScript : MonoBehaviour {
             }
             if (randomNumber * 100f <= 70f && randomNumber * 100f > 60f)
             {
-                uiText2.text = "Did you see what she said on her twitter?\n She's a total bitch!";
+                uiText2.text = "Did you see what she said on her twitter? \nShe's a total bitch!";
             }
             if (randomNumber * 100f <= 80f && randomNumber * 100f > 70f)
             {
-                uiText2.text = "This mall is pretty drab looking."; 
+                uiText2.text = "This mall is pretty drab looking.";
             }
             if (randomNumber * 100f <= 90f && randomNumber * 100f > 80f)
             {
@@ -63,6 +67,10 @@ public class randomNPCScript : MonoBehaviour {
                 uiText2.text = "Where is my kid? You're not my kid.";
             }
             //todo- convert this to switchcase if possible
+        }
+        if ((player.position - npc.position).magnitude <= 5f && Input.GetKeyDown(KeyCode.Space) && timePassed > 30)
+        {
+            uiText2.text = "That person's too scary to talk to...";
         }
     }
 }

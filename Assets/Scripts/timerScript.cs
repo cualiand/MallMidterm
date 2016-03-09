@@ -20,7 +20,25 @@ public class timerScript : MonoBehaviour {
     // Update is called once per frame
     void Update () {
       int timePassed = (int) Time.timeSinceLevelLoad; //use timesincelevelload
-      uiText.text = "the timer is " + timePassed.ToString();
+      int clockTime = timePassed;
+      if (timePassed < 60 && timePassed < 10)
+        {
+            uiText.text = "The time is 5:0" + clockTime.ToString();
+        }
+      else if (timePassed < 60 && timePassed >= 10) 
+        {
+            uiText.text = "The time is 5:" + clockTime.ToString();
+        }
+      else if (timePassed >= 60 && timePassed < 70 ) {
+            clockTime -= 60;
+            uiText.text = "The time is 6:" + clockTime.ToString();
+        }
+      else if (timePassed >= 71)
+        {
+            uiText.text = "The time is 6:0" + clockTime.ToString(); //todo- fix clock being permanantly 5:00
+        }
+      
+      
         
         if( timePassed < 63 )
         {
@@ -31,28 +49,28 @@ public class timerScript : MonoBehaviour {
         
         if (timePassed > 10)
         {
-            uiText.text = "the timer is " + timePassed.ToString() + "\nI wonder where my parents went...";
+            uiText.text = "The time is 5:" + clockTime.ToString() + "\nI wonder where my parents went...";
         }
         if (timePassed > 20)
         {
-            uiText.text = "the timer is " + timePassed.ToString() + "\nMom? Dad? This isn't funny...";
+            uiText.text = "The time is 5:" + clockTime.ToString() + "\nMom? Dad? This isn't funny...";
         }
         if (timePassed > 30)
         {
-            uiText.text = "the timer is " + timePassed.ToString() + "\nGuys? I really want to go home now,\npretty please?";
+            uiText.text = "The time is 5:" + clockTime.ToString() + "\nGuys? I really want to go home now,\npretty please?";
         }
         if (timePassed > 40)
         {
-            uiText.text = "the timer is " + timePassed.ToString() + "\nThis isn't funny... \nwhy is everything getting bigger?";
+            uiText.text = "The time is 5:" + clockTime.ToString() + "\nThis isn't funny... \nwhy is everything getting bigger?";
         }
         if (timePassed > 50)
         {
-            uiText.text = "the timer is " + timePassed.ToString() + "\nDid they forget about me? \nI don't have a phone to call them, and\nI'm too scared to ask.";
+            uiText.text = "The time is 5:" + clockTime.ToString() + "\nDid they forget about me?";
         }
 
         if (timePassed > 60)
         {
-            uiText.text = "the timer is " + timePassed.ToString() + "\nOkay, just calm down. They've got \nto be around here somewhere, \nbut I can't see them with \nall these giant people.";
+            uiText.text = "The time is 5:" + clockTime.ToString() + "\nOkay, just calm down.";
         } 
 
         if (timePassed >= 3 && timePassed % 3 == 0)
