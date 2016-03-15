@@ -11,6 +11,7 @@ public class randomNPCScript : MonoBehaviour {
     public Text uiText2;
     public int timePassed;
     public float randomNumber;
+    public AudioSource talkingSound;
 
     // Use this for initialization
     void Start () {
@@ -22,13 +23,14 @@ public class randomNPCScript : MonoBehaviour {
 	void Update () {
         if ((player.position - npc.position).magnitude <= 5f && Input.GetKeyDown(KeyCode.Space))
         {
+            talkingSound.PlayOneShot(talkingSound.clip, 1f);
             if (randomNumber * 100f < 10f)
             {
                 uiText2.text = "Poor kid. Looks like he's lost.";
             }
             if (randomNumber * 100f <= 20f && randomNumber * 100f > 10f)
             {
-                uiText2.text = "I wonder where his parents are?";
+                uiText2.text = "I wonder where this kid's parents are?";
             }
             if (randomNumber * 100f <= 30f && randomNumber * 100f > 20f)
             {
@@ -36,7 +38,7 @@ public class randomNPCScript : MonoBehaviour {
             }
             if (randomNumber * 100f <= 40f && randomNumber * 100f > 30f)
             {
-                uiText2.text = "Oh, they have a sale at the \n[insert clothing store] today!";
+                uiText2.text = "Oh, they have a sale at the \nHot Topic today!";
             }
             if (randomNumber * 100f <= 50f && randomNumber * 100f > 40f)
             {
@@ -48,7 +50,7 @@ public class randomNPCScript : MonoBehaviour {
             }
             if (randomNumber * 100f <= 70f && randomNumber * 100f > 60f)
             {
-                uiText2.text = "Did you see what she said on her twitter?\n She's a total bitch!";
+                uiText2.text = "Did you see what she said on her twitter?\nShe's a total jerk!";
             }
             if (randomNumber * 100f <= 80f && randomNumber * 100f > 70f)
             {

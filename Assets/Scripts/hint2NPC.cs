@@ -10,6 +10,7 @@ public class hint2NPC : MonoBehaviour
     public Text uiText;
     public Text uiText2;
     public int timePassed;
+    public AudioSource talkingSound;
 
 
 
@@ -19,6 +20,7 @@ public class hint2NPC : MonoBehaviour
     {
         if ((player.position - npc.position).magnitude <= 5f && Input.GetKeyDown(KeyCode.Space))
         {
+            talkingSound.PlayOneShot(talkingSound.clip, 1f);
             uiText2.text = "I just saw some parents rush through here!";
         }
     }

@@ -12,6 +12,7 @@ public class redRandomNPC : MonoBehaviour
     public Text uiText2;
     public int timePassed;
     public float randomNumber;
+    public AudioSource talkingSound;
 
     // Use this for initialization
     void Start()
@@ -26,13 +27,14 @@ public class redRandomNPC : MonoBehaviour
         int timePassed = (int)Time.timeSinceLevelLoad;
         if ((player.position - npc.position).magnitude <= 5f && Input.GetKeyDown(KeyCode.Space) && timePassed <= 30)
         {
+            talkingSound.PlayOneShot(talkingSound.clip, 1f);
             if (randomNumber * 100f < 10f)
             {
                 uiText2.text = "Poor kid. Looks like he's lost.";
             }
             if (randomNumber * 100f <= 20f && randomNumber * 100f > 10f)
             {
-                uiText2.text = "I wonder where his parents are?";
+                uiText2.text = "I wonder where this kid's parents are?";
             }
             if (randomNumber * 100f <= 30f && randomNumber * 100f > 20f)
             {
@@ -44,7 +46,7 @@ public class redRandomNPC : MonoBehaviour
             }
             if (randomNumber * 100f <= 50f && randomNumber * 100f > 40f)
             {
-                uiText2.text = "Dude, have you seen the new Call of Duty? It looks sick, bro!";
+                uiText2.text = "Dude, have you seen the new Call of Duty? \nIt looks sick, bro!";
             }
             if (randomNumber * 100f <= 60f && randomNumber * 100f > 50f)
             {
@@ -52,7 +54,7 @@ public class redRandomNPC : MonoBehaviour
             }
             if (randomNumber * 100f <= 70f && randomNumber * 100f > 60f)
             {
-                uiText2.text = "Did you see what she said on her twitter? \nShe's a total bitch!";
+                uiText2.text = "Did you see what she said on her twitter? \nShe's a total jerk!";
             }
             if (randomNumber * 100f <= 80f && randomNumber * 100f > 70f)
             {
@@ -70,6 +72,7 @@ public class redRandomNPC : MonoBehaviour
         }
         if ((player.position - npc.position).magnitude <= 5f && Input.GetKeyDown(KeyCode.Space) && timePassed > 30)
         {
+            talkingSound.PlayOneShot(talkingSound.clip, 1f);
             uiText2.text = "That person's too scary to talk to...";
         }
     }

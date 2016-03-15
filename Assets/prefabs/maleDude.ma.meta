@@ -30,6 +30,13 @@ ModelImporter:
     100044: polySurface5
     100046: pSphere2
     100048: transform7
+    100050: polySurface3 1
+    100052: transform10
+    100054: transform11
+    100056: transform12
+    100058: transform13
+    100060: transform8
+    100062: transform9
     400000: group
     400002: group1
     400004: group2
@@ -55,6 +62,13 @@ ModelImporter:
     400044: polySurface5
     400046: pSphere2
     400048: transform7
+    400050: polySurface3 1
+    400052: transform10
+    400054: transform11
+    400056: transform12
+    400058: transform13
+    400060: transform8
+    400062: transform9
     2300000: pasted__pCylinder1
     2300002: pasted__pCylinder2
     2300004: pCube1

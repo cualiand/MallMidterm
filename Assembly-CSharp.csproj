@@ -49,6 +49,8 @@
      <Compile Include="Assets\Scripts\deathZone.cs" />
      <Compile Include="Assets\Scripts\hint1NPC.cs" />
      <Compile Include="Assets\Scripts\hint2NPC.cs" />
+     <Compile Include="Assets\Scripts\hint3NPC.cs" />
+     <Compile Include="Assets\Scripts\hint4NPC.cs" />
      <Compile Include="Assets\Scripts\mouseLook.cs" />
      <Compile Include="Assets\Scripts\npc2Script.cs" />
      <Compile Include="Assets\Scripts\npcScript.cs" />

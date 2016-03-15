@@ -9,7 +9,7 @@ public class npc2Script : MonoBehaviour
     public Transform npc;
     public Text uiText;
     public Text uiText2;
-    
+    public AudioSource talkingSound;
 
 
 
@@ -22,7 +22,9 @@ public class npc2Script : MonoBehaviour
         {
             spottedPlayer = true;
             Debug.Log("detected2");
+            talkingSound.PlayOneShot(talkingSound.clip, 1f);
             uiText2.text = "Oh, are you lost? Looking for your parents?\nIf you ask around, \nI'm sure someone might have an idea.";
+
         }
 
 

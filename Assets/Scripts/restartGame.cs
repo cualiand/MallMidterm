@@ -13,7 +13,7 @@ public class restartGame : MonoBehaviour {
 	void Update () {
 	    if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
         }
 
 	}

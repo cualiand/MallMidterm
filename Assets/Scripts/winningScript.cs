@@ -11,6 +11,7 @@ public class winningScript : MonoBehaviour {
     public Text uiText2;
     public bool spottedPlayer;
     static public bool canGoHome;
+    public AudioSource talkingSound;
 
 
     // Use this for initialization
@@ -24,8 +25,9 @@ public class winningScript : MonoBehaviour {
     {
         if ((player.position - winningNPC.position).magnitude <= 5f && Input.GetKeyDown(KeyCode.Space))
         {
+            talkingSound.PlayOneShot(talkingSound.clip, 1f);
             canGoHome = true;
-            uiText2.text = "Congratz, you found your parents! \nPress [H] to go home!";
+            uiText2.text = "Phew, you found Mom and Dad! \nPress [H] to go home!";
 
         }
 
